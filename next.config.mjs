@@ -5,7 +5,19 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "image.tmdb.org",
-        pathname: "/t/p/**", // Match all paths under /t/p/
+        pathname: "/t/p/**",
+      },
+      {
+        protocol: "http",
+        hostname: "facebook.com",
+      },
+      {
+        protocol: "http",
+        hostname: "x.com",
+      },
+      {
+        protocol: "http",
+        hostname: "linkedin.com",
       },
     ],
   },
