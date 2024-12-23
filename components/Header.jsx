@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import SearchNav from "./SearchNav";
 
 export default function Header() {
@@ -23,7 +24,9 @@ export default function Header() {
           </div>
         </div>
         <div className="relative">
-          <SearchNav />
+          <Suspense fallback={<div>Loading...</div>}>
+            <SearchNav />
+          </Suspense>
           <div
             id="searchResults"
             className="absolute w-full mt-2 bg-black bg-opacity-90 rounded-lg hidden"
