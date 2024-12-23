@@ -9,7 +9,7 @@ export default function TrendingMovies({ trendingMovies }) {
         {trendingMovies.map((movie) => (
           <div
             className="flex-shrink-0 w-48 cursor-pointer hover:scale-105 transition-transform"
-            key=" movie?.id"
+            key={movie?.id}
           >
             <Link href={`/movie/${movie?.id}`}>
               <Image
