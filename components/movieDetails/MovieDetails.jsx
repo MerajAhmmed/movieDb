@@ -24,9 +24,9 @@ export default function MovieDetails({ singleMovieDetails }) {
             </Suspense>
             <div className="md:w-2/3">
               <MovieInfo singleMovieDetails={singleMovieDetails} />
-              <div className="mb-6">
+              <div className="mb-6 ">
                 <h3 className="text-gray-400 mb-2">Cast</h3>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 ">
                   {singleMovieDetails?.production_companies?.map((cast) => (
                     <MovieCast
                       key={cast?.id}

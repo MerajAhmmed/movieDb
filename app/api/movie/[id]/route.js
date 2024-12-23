@@ -6,15 +6,14 @@ export async function GET(request, { params }) {
 
   try {
     const response = await fetch(
-      `${TMDB_API_URL}/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`
+      `${TMDB_API_URL}/movie/${id}/similar?api_key=${TMDB_API_KEY}&language=en-US`
     );
 
     const data = await response.json();
 
-    return new Response(JSON.stringify(data), { status: 200 });
+    return new Response(JSON.stringify(data.results), { status: 200 });
   } catch (e) {
-    console.error("Error fetching Single movie:", e.message);
-
+    console.error("Error fetching similar movies:", e.message);
     return new Response(JSON.stringify({ error: e.message }), { status: 500 });
   }
 }

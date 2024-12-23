@@ -11,7 +11,6 @@ export default async function BgImage({ bgPostar }) {
         src={`https://image.tmdb.org/t/p/w500${bgPostar}`}
         alt="Smile 2"
         className="w-full h-full object-cover"
-        sizes="100vw"
         width={100}
         height={100}
         placeholder="blur"
