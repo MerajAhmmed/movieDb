@@ -21,9 +21,9 @@ export default function Loginpage() {
 
         <div className="mt-6 text-moviedb-gray">
           New to moviedb?
-          <a href="#" className="text-white hover:underline">
+          <Link href="/register" className="text-white hover:underline">
             Sign up now
-          </a>
+          </Link>
         </div>
       </div>
     </div>
