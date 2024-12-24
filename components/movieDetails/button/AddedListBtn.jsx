@@ -1,6 +1,11 @@
+import Link from "next/link";
+
 export default function AddedListBtn() {
   return (
-    <button className="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg text-green-600">
+    <Link
+      href="/login"
+      className="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg text-green-600"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -18,6 +23,6 @@ export default function AddedListBtn() {
         <path d="M2 12l5 5m5 -5l5 -5" />
       </svg>
       Added to Wacth List
-    </button>
+    </Link>
   );
 }

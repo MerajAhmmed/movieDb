@@ -1,12 +1,9 @@
 export async function GET(request, { params }) {
   const { id } = params;
 
-  const TMDB_API_URL = process.env.TMDB_API_BASE_URL;
-  const TMDB_API_KEY = process.env.TMDB_API_KEY;
-
   try {
     const response = await fetch(
-      `${TMDB_API_URL}/movie/${id}?api_key=${TMDB_API_KEY}&language=en-US`
+      `${process.env.TMDB_API_BASE_URL}/movie/${id}?api_key=${process.env.TMDB_API_KEY}&language=en-US`
     );
 
     const data = await response.json();
